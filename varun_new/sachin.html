@@ -1,0 +1,54 @@
+
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+<div></div>
+
+
+<script type="text/babel" >
+ 
+
+  class Add extends React.Component{
+    
+    constructor(){
+     
+        super();
+        this.n1Ref=React.createRef();
+        this.n2Ref=React.createRef();
+        // this.result=0
+       
+        this.state={
+            result:0
+        }
+    }
+
+   
+     
+     fnAdd(){
+    
+       let n1=this.n1Ref.current.value;
+       let sum= reverseString(n1);
+       // this.result=sum;
+       // this.state.result=sum;
+
+       this.setState({
+            result:sum,
+        })
+     }
+
+     render(){
+         return <div>
+                <p><b>No1:</b><input ref={this.n1Ref}   /></p>
+                <p><button onClick={this.fnAdd.bind(this)}>sum</button></p>
+                <h1>{this.state.result}</h1>
+            </div>
+     }
+  }
+
+
+  //render your content inside container
+ 
+  ReactDOM.render(<Add />, document.querySelector('div'))
+
+</script>

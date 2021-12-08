@@ -1,0 +1,36 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+
+    class Name extends React.Component{
+
+        constructor(){
+            super();
+            this.state={
+                'name':'Schin'
+            }
+
+        }
+
+        fnName(){
+            this.setState({
+                'name':'dhoni'
+            })
+        }
+
+        render(){
+            return <div>
+                <h1>{this.state.name}</h1>
+                <button onClick={this.fnName.bind(this)}>click me</button>
+                </div>
+        }
+
+    }
+
+    ReactDOM.render(<Name />, document.getElementById('root'));
+</script>

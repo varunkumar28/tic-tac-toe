@@ -1,0 +1,21 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+<div id="root"></div>
+
+
+
+
+<script type="text/babel">
+    function App(d) {
+        return <div>Hi, {d.name} from {d.place}</div>
+    }
+
+    function Box() {
+
+        return <App name="abdulla " place="tirupati"></App>
+    }
+
+    ReactDOM.render(<Box />, document.getElementById('root'))
+
+</script>

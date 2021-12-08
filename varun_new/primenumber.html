@@ -1,0 +1,39 @@
+<script src="react.development.js"></script>
+
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+
+    <div id="root"></div>
+
+
+
+
+
+<script type="text/babel">
+
+
+
+function Hello(){
+
+    constructor(){
+                super();
+                this.fnGetData=this.fnGetData.bind(this);
+              }
+
+    function fnGetData(){
+                let nameRef=this.refs.name;
+                let name=nameRef.value;
+                alert(name);
+    }
+    
+    return <div> Name:
+        <input type="text" />
+        <input type='button' value="submit"/>
+         </div>
+}
+
+ReactDOM.render(<Hello />,document.getElementById('root'))
+
+    
+</script>

@@ -1,0 +1,39 @@
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.min.js"></script>
+
+
+<div id="root"></div>
+
+
+<script type='text/babel'>
+
+
+
+    class App extends React.Component {
+
+        constructor(){
+            super();
+            this.n1Ref=React.createRef();
+
+        }
+
+        fnAdd(){
+            let n1=this.n1Ref.current.value;
+            this.state.result=n1;
+
+        }
+
+        render() {
+
+            return <div>
+                <p>Input : <input  ref={this.n1Ref}></input></p>
+                <button onClink={this.fnAdd.bind(this)}>Submit</button>
+                <h1>{this.state.result}</h1>
+            </div>
+        }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'))
+
+</script>

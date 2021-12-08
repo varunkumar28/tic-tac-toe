@@ -1,0 +1,22 @@
+ <script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script> 
+<div id="root"></div>
+
+<!--<script>
+      var content = "<h1>Hello World</h1>"
+     var ref = document.getElementById('root');
+     ref.innerHTML = content; 
+    document.getElementById('root').innerHTML = "<h1>Hello World</h1>";
+</script> -->
+
+
+<script type="text/babel">
+function Hello(){
+    //var content = <h1>Hello World</h1>
+    return <h1>Hello World</h1>;
+}
+
+ReactDOM.render(<Hello />,document.getElementById('root'))
+
+</script> 
